@@ -18,21 +18,21 @@
      </tr>
    </thead>
    <tbody>
-   {% for i in obj %}
+   {% for v in data %}
      <tr>
-       <td>{{i.title}}</td>
-       <td>{{i.description}}</td>
-       <td>{{i.created_at}}</td>
+       <td>{{v.title}}</td>
+       <td>{{v.description}}</td>
+       <td>{{v.created_at}}</td>
        <td>
-        {% if i.completed %}
+        {% if v.is_completed %}
            Completed
          {% else %}
            Not Completed
          {% endif %}
        </td>
        <td>
-           <button class="btn btn-warning"><a href="{% url 'update_url' i.id %}">Update</a></button>&nbsp;&nbsp;
-           <button class="btn btn-danger"><a href="{% url 'delete_url' i.id %}">Delete</a></button>
+           <button class="btn btn-warning"><a href="{% url 'updateTodoUrl' v.id %}">Update</a></button>&nbsp;&nbsp;
+           <button class="btn btn-danger"><a href="{% url 'deleteTodoUrl' v.id %}">Delete</a></button>
        </td>
      </tr>
    {% endfor %}

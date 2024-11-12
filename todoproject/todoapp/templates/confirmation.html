@@ -10,7 +10,7 @@
             {% csrf_token %}
             <h2>Are you sure you want to delete <span class="text-danger">{{obj.title}}</span>? </h2>
             <input type="submit" value="YES" class="btn btn-danger">
-            <button class="btn btn-success"><a href="{% url 'show_url' %}">No</a></button>
+            <button class="btn btn-success"><a href="{% url 'todosListUrl' %}">No</a></button>
         </form>
     </div>
 {% endblock %}

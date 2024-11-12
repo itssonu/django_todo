@@ -15,7 +15,7 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'todo_url' %}">Todo App</a>
+        <a class="navbar-brand" href="{% url 'todosListUrl' %}">Todo App</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -30,10 +30,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'todo_url' %}">Add Todo</a>
+              <a class="nav-link" href="{% url 'createTodoUrl' %}">Add Todo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'show_url' %}">Show Todo</a>
+              <a class="nav-link" href="{% url 'todosListUrl' %}">Show Todo</a>
             </li>
           </ul>
         </div>
