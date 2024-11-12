@@ -3,5 +3,8 @@ from . import views
 
 urlpatterns = [
     path('hello-world', views.helloWorld),
-    path('', views.index),
+    path('', views.createTodoView, name='todo_url'),
+    path('show/', views.showTodoView, name='show_url'),
+    path('up/<int:f_id>', views.updateTodoView, name= 'update_url'),
+    path('del/<int:f_id>', views.deleteTodoView, name= 'delete_url'),
 ]
